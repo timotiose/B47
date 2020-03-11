@@ -79,7 +79,7 @@
 			"name": "Fuselage",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "A321LR-3-Fusalage.gltf",
+			"model": "b47TestFlightSample.glb",
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
@@ -90,7 +90,7 @@
 			"name": "Wings",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "A321LR-3-Wings2.gltf",
+			"model": "b47TestFlightSample.glb",
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
@@ -101,7 +101,7 @@
 			"name": "Control Surfaces.gltf",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "A321LR-3-Control Surfaces.gltf",
+			"model": "b47TestFlightSample.glb",
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
