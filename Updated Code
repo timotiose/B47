@@ -550,7 +550,7 @@
 
 	"sounds": [{
 			"id": "rpm1",
-			"file": "sounds/o235/rpm1.mp3",
+			"file": "sounds/f16/rpm1.mp3",
 			"effects": {
 				"volume": {
 					"value": "rpm",
@@ -566,7 +566,7 @@
 		},
 		{
 			"id": "rpm2",
-			"file": "sounds/o235/rpm2.mp3",
+			"file": "sounds/f16/rpm2.mp3",
 			"effects": {
 				"volume": {
 					"value": "rpm",
@@ -582,7 +582,7 @@
 		},
 		{
 			"id": "rpm3",
-			"file": "sounds/o235/rpm3.mp3",
+			"file": "sounds/f16/rpm2.mp3",
 			"effects": {
 				"volume": {
 					"value": "rpm",
@@ -598,7 +598,7 @@
 		},
 		{
 			"id": "rpm4",
-			"file": "sounds/o235/rpm4.mp3",
+			"file": "sounds/f16/rpm2.mp3",
 			"cut": [0, 1000],
 			"effects": {
 				"volume": {
@@ -639,11 +639,11 @@
 
 		{
 			"id": "startup",
-			"file": "sounds/o235/startup.mp3"
+			"file": "sounds/f16/startup.mp3"
 		},
 		{
 			"id": "shutdown",
-			"file": "sounds/o235/shutdown.mp3"
+			"file": "sounds/f16/shutdown.mp3"
 		}
 	],
 
