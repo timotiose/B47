@@ -70,7 +70,9 @@
 			}]
 		},
 		"brakes": "",
-		"flaps": ""
+		"flaps": "",
+		"gear": "",
+                "spoilers": ""
 	},
 
 	"parts": [
@@ -79,7 +81,7 @@
 			"name": "Fuselage",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "b47finalcopy.glb",
+			"model": "smallerb47.glb"
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
@@ -90,7 +92,7 @@
 			"name": "Wings",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "b47finalcopy.glb",
+			"model": "smallerb47.glb",
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
@@ -101,14 +103,13 @@
 			"name": "Control Surfaces.gltf",
 			"type": "root",
 			"position": [0, 0, 0],
-			"model": "b47finalcopy.glb",
+			"model": "smallerb47.glb",
 			"animations": [{
 				"type": "justhide",
 				"value": "view",
 				"eq": "cockpit"
 			}]
 		},
-
 		{
 			"name": "body",
 			"type": "airfoil",
@@ -130,8 +131,6 @@
 				[0, -10, -0.5]
 			]
 		},
-
-
 		{
 			"name": "leftwing",
 			"type": "airfoil",
@@ -147,7 +146,6 @@
 			"rotation": [-2, -5, 0],
 			"stalls": true
 		},
-
 		{
 			"name": "rightwing",
 			"type": "airfoil",
@@ -163,7 +161,6 @@
 			"rotation": [-2, -5, 0],
 			"stalls": true
 		},
-
 		{
 			"name": "horizontalstab",
 			"type": "airfoil",
@@ -174,7 +171,6 @@
 				"forceSourcePoint": [0, -15, 2.5]
 			}
 		},
-
 		{
 			"name": "verticalstab",
 			"type": "airfoil",
@@ -185,7 +181,6 @@
 				"forceSourcePoint": [0, -15, 5]
 			}
 		},
-
 		{
 			"name": "leftAileron",
 			"type": "airfoil",
@@ -202,7 +197,6 @@
 				"ratio": -30
 			}]
 		},
-
 		{
 			"name": "rightAileron",
 			"type": "airfoil",
@@ -219,7 +213,6 @@
 				"ratio": 30
 			}]
 		},
-
 		{
 			"name": "leftFlap",
 			"type": "airfoil",
@@ -236,7 +229,6 @@
 				"ratio": -10
 			}]
 		},
-
 		{
 			"name": "rightFlap",
 			"type": "airfoil",
@@ -253,7 +245,6 @@
 				"ratio": -10
 			}]
 		},
-
 		{
 			"name": "elevator",
 			"type": "airfoil",
@@ -270,7 +261,6 @@
 				"ratio": 25
 			}]
 		},
-
 		{
 			"name": "rudder",
 			"type": "airfoil",
@@ -288,125 +278,83 @@
 			}]
 		},
 
+
 		{
-			"name": "leftGear",
-			"type": "wheel",
-			"node": "leftGear",
-			"position": [-0.488936, -0.112578, -1.02284],
-			"collisionPoints": [
-				[-0.75, 0, 0]
-			],
-			"suspension": {
-				"motion": "rotation",
+			"name": "gear_left",
+			"node": "training-supports",
+			"position": [-3, 0.3, -0.5],
+			"animations": [{
+				"type": "rotate",
 				"axis": "Y",
-				"ratio": 1,
-				"stiffness": 30,
-				"damping": 6
-			}
-		},
-
-		{
-			"name": "leftWheel",
-			"type": "none",
-			"node": "leftWheel",
-			"animations": [{
-				"type": "rotate",
-				"axis": "X",
-				"value": "leftGearRotation",
-				"ratio": 9
+				"value": "gearPosition",
+				"ratio": 85
 			}]
 		},
 
 		{
-			"name": "rightGear",
-			"type": "wheel",
-			"node": "rightGear",
-			"position": [0.486954, -0.112184, -1.02343],
-			"collisionPoints": [
-				[0.75, 0, 0]
-			],
-			"suspension": {
-				"motion": "rotation",
+			"name": "wheels_left",
+			"type": "none",
+			"node": "training-wheels",
+			"animations": [{
+				"type": "rotate",
+				"axis": "X",
+				"value": "gear_left_suspensionRotation",
+				"ratio": -2
+			}]
+		},
+
+
+		{
+			"name": "gear_right",
+			"node": "rear-support",
+			"position": [3, 0.3, -0.5],
+			"animations": [{
+				"type": "rotate",
 				"axis": "Y",
-				"ratio": 1,
-				"stiffness": 30,
-				"damping": 6
-			}
-		},
-
-		{
-			"name": "rightWheel",
-			"type": "none",
-			"node": "rightWheel",
-			"animations": [{
-				"type": "rotate",
-				"axis": "X",
-				"value": "rightGearRotation",
-				"ratio": 9
+				"value": "gearPosition",
+				"ratio": -85
 			}]
 		},
 
-		{
-			"name": "frontGear",
-			"type": "wheel",
-			"node": "frontGear",
-			"position": [7.45058e-7, 1.49404, -1.19455],
-			"animations": [{
-				"type": "rotate",
-				"axis": "Z",
-				"value": "yaw",
-				"ratio": 30
-			}],
-			"collisionPoints": [
-				[0, 0, 0]
-			],
-			"suspension": {
-				"motion": "translate",
-				"axis": "Z",
-				"ratio": 1,
-				"stiffness": 60,
-				"damping": 10
-			}
-		},
 
 		{
-			"name": "frontSuspension1",
-			"type": "none",
-			"parent": "frontGear",
-			"node": "frontSuspension1",
+			"name": "nose_leg",
+			"node": "rearwheel",
+			"position": [0, 13.3, 0],
 			"animations": [{
 				"type": "rotate",
 				"axis": "X",
-				"value": "frontGearSuspension",
-				"ratio": -200
+				"value": "gearPosition",
+				"ratio": -110,
+				"delay": -0.5
 			}]
 		},
+
 
 		{
-			"name": "frontSuspension2",
-			"type": "none",
-			"parent": "frontSuspension1",
-			"node": "frontSuspension2",
+			"name": "gear_right",
+			"node": "front-support",
+			"position": [3, 0.3, -0.5],
 			"animations": [{
 				"type": "rotate",
-				"axis": "X",
-				"value": "frontGearSuspension",
-				"ratio": 400
+				"axis": "Y",
+				"value": "gearPosition",
+				"ratio": -85
 			}]
 		},
+
 
 		{
-			"name": "frontWheel",
-			"type": "none",
-			"node": "frontWheel",
+			"name": "gear_right",
+			"node": "frontwheel",
+			"position": [3, 0.3, -0.5],
 			"animations": [{
 				"type": "rotate",
-				"axis": "X",
-				"value": "frontGearRotation",
-				"ratio": 9
+				"axis": "Y",
+				"value": "gearPosition",
+				"ratio": -85
 			}]
 		},
-
 		{
 			"name": "engine",
 			"type": "engine",
@@ -417,9 +365,6 @@
 				"forceSourcePoint": [0, 0, 0]
 			}
 		},
-
-
-
 		{
 			"name": "engine1",
 			"type": "engine",
@@ -432,7 +377,6 @@
 				"contrailAnchor": [-5.1, -30, -1.3]
 			}
 		},
-
 		{
 			"name": "fanleft",
 			"node": "Left Engine Fan",
@@ -443,7 +387,6 @@
 				"ratio": -1
 			}]
 		},
-
 		{
 			"name": "reverse_left",
 			"node": "Thrust Reversers",
@@ -456,7 +399,6 @@
 				"ratio": 0.000008
 			}]
 		},
-
 		{
 			"name": "engine2",
 			"type": "engine",
@@ -469,7 +411,6 @@
 				"contrailAnchor": [5.1, -30, -1.3]
 			}
 		},
-
 		{
 			"name": "fan_right",
 			"node": "Right Engine Fan",
@@ -480,7 +421,6 @@
 				"ratio": -1
 			}]
 		},
-
 		{
 			"name": "reverse_right",
 			"node": "Thrust Reversers",
@@ -502,7 +442,6 @@
 			}],
 			"position": [-5.5, 0.47, 0.28]
 		},
-
 		{
 			"name": "rightlight",
 			"light": "green",
@@ -512,7 +451,6 @@
 			}],
 			"position": [5.5, 0.47, 0.28]
 		},
-
 		{
 			"name": "strobe",
 			"light": "white",
